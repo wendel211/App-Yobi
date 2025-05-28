@@ -20,6 +20,14 @@ export default function Onboarding1Screen({ navigation }: Props) {
         <Text style={styles.text}>
           Encontre pedreiros, eletricistas e outros profissionais confiáveis para sua obra.
         </Text>
+        
+        {/* Pagination Dots */}
+        <View style={styles.dotsContainer} accessible accessibilityLabel="Progresso do onboarding: etapa 2 de 3">
+          <View style={styles.dot} />
+          <View style={[styles.dot, styles.dotActive]} />
+          <View style={styles.dot} />
+        </View>
+
         <TouchableOpacity style={styles.button} onPress={() => navigation.replace('Onboarding3')}>
           <Text style={styles.buttonText}>Próximo</Text>
         </TouchableOpacity>
@@ -67,6 +75,24 @@ const styles = StyleSheet.create({
     width: BUTTON_WIDTH,
     alignSelf: 'center',
   },
+  // Pagination Dots Styles
+  dotsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 32,
+    gap: 8,
+  },
+  dot: {
+  width: 12,
+  height: 12,
+  borderRadius: 6,
+  backgroundColor: '#B0BEC5',
+  marginHorizontal: 4,
+},
+dotActive: {
+  backgroundColor: '#34495E', 
+},
   button: { 
     backgroundColor: '#34495E', 
     borderRadius: 10, 
