@@ -9,7 +9,7 @@ export default function ChooseProfileScreen({ navigation }: Props) {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../../assets/images/yobi-logo-variant.png')}
+        source={require('../../assets/images/logo_variation_black.png')}
         style={styles.logo}
       />
       <Text style={styles.title}>Seja bem-vindo(a)!</Text>
@@ -20,7 +20,7 @@ export default function ChooseProfileScreen({ navigation }: Props) {
         {/* Cliente */}
         <TouchableOpacity
           style={[styles.optionCard, { marginRight: 18 }]}
-          onPress={() => navigation.navigate('Register')}
+          onPress={() => navigation.navigate('Login')}
         >
           <View style={styles.iconCircle}>
             <Text style={styles.iconText}>👤</Text>

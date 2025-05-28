@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../navigation/AppNavigator';
+import { RootStackParamList } from '../../../navigation/AppNavigator';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Onboarding3'>;
 
@@ -9,11 +9,11 @@ export default function Onboarding3Screen({ navigation }: Props) {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../../assets/images/logo.png')}
+        source={require('../../../assets/images/logo_variation_black.png')}
         style={styles.logo}
       />
       <Image
-        source={require('../../assets/images/onboard_3.png')}
+        source={require('../../../assets/images/onboard_3.png')}
         style={styles.illustration}
       />
       <View style={styles.contentBox}>
@@ -42,14 +42,14 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   logo: { 
-    width: 50, 
-    height: 50, 
+    width: 70, 
+    height: 70, 
     marginBottom: 12, 
     resizeMode: 'contain' 
   },
   illustration: { 
-    width: 220, 
-    height: 170, 
+    width: 296, 
+    height: 296, 
     marginVertical: 24, 
     resizeMode: 'contain' 
   },
