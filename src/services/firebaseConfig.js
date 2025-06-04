@@ -1,14 +1,15 @@
-
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+import { project_info, client } from "../../google-services.json"
+
 const firebaseConfig = {
-  apiKey: "SUA_API_KEY",
-  authDomain: "SEU_AUTH_DOMAIN",
-  projectId: "SEU_PROJECT_ID",
-  storageBucket: "SEU_STORAGE_BUCKET",
-  messagingSenderId: "SEU_SENDER_ID",
-  appId: "SEU_APP_ID"
+  apiKey: client[0].api_key[0].current_key,
+  authDomain: `${project_info.project_id}.firebaseapp.com`,
+  projectId: project_info.project_id,
+  storageBucket: project_info.storage_bucket,
+  messagingSenderId: project_info.project_number,
+  appId: client[0].client_info.mobilesdk_app_id
 };
 
 const app = initializeApp(firebaseConfig);
